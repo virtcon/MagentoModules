@@ -1,4 +1,4 @@
-MagentoModules
+Redis Cache Magento Module
 ==============
 
-OpenSource Magento Modules by MageLine
+Redis Cache by MageLine
