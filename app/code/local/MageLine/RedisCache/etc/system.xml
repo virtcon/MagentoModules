@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <mageline translate="label" module="mageline_rediscache">
+            <label>MageLine</label>
+            <sort_order>10</sort_order>
+        </mageline>
+    </tabs>
+    <sections>
+        <mageline_rediscache translate="label" module="mageline_rediscache">
+            <class>separator-top</class>
+            <label>Redis Cache</label>
+            <tab>mageline</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <servers translate="label" module="mageline_rediscache">
+                    <expanded>1</expanded>
+                    <label>Redis Servers</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <redis_data_server_ip translate="label" module="mageline_rediscache">
+                            <label>Redis Server IP</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </redis_data_server_ip>
+                        <redis_data_server_port translate="label" module="mageline_rediscache">
+                            <label>Redis Server Port</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </redis_data_server_port>
+                    </fields>
+                </servers>
+            </groups>
+        </mageline_rediscache>
+    </sections>
+</config> 

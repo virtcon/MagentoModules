@@ -1,0 +1,65 @@
+<config>
+    <modules>
+        <MageLine_RedisCache>
+            <version>0.0.1</version>
+        </MageLine_RedisCache>
+    </modules>
+    <global>
+        <blocks>
+            <mageline_rediscache>
+                <class>MageLine_RedisCache_Block</class>
+            </mageline_rediscache>
+        </blocks>
+        <helpers>
+            <mageline_rediscache>
+                <class>MageLine_RedisCache_Helper</class>
+            </mageline_rediscache>
+        </helpers>
+        <models>
+            <mageline_rediscache>
+                <class>MageLine_RedisCache_Model</class>
+            </mageline_rediscache>
+        </models>
+        <cache>
+            <types>
+                <mageline_rediscache_data translate="label" module="mageline_rediscache">
+                    <label>Redis Data Cache</label>
+                    <description>Clear Magento cache stored in Redis</description>
+                    <tags>RDC</tags>
+                </mageline_rediscache_data>
+            </types>
+        </cache>
+    </global>
+    <adminhtml>
+        <events>
+            <controller_action_postdispatch_adminhtml_cache_flushAll>
+                <observers>
+                    <mageline_rediscache>
+                        <type>singleton</type>
+                        <class>mageline_rediscache/observer</class>
+                        <method>cleanCache</method>
+                    </mageline_rediscache>
+                </observers>
+            </controller_action_postdispatch_adminhtml_cache_flushAll>
+            <controller_action_postdispatch_adminhtml_cache_flushSystem>
+                <observers>
+                    <mageline_rediscache>
+                        <type>singleton</type>
+                        <class>mageline_rediscache/observer</class>
+                        <method>cleanCache</method>
+                    </mageline_rediscache>
+                </observers>
+            </controller_action_postdispatch_adminhtml_cache_flushSystem>
+            <adminhtml_cache_refresh_type>
+                <observers>
+                    <mageline_rediscache>
+                        <type>singleton</type>
+                        <class>mageline_rediscache/observer</class>
+                        <method>cleanCacheByType</method>
+                    </mageline_rediscache>
+                </observers>
+            </adminhtml_cache_refresh_type>
+        </events>
+    </adminhtml>
+    
+</config>

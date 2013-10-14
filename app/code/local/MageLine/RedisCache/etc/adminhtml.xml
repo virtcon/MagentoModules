@@ -1,0 +1,21 @@
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageline_rediscache translate="title" module="mageline_rediscache">
+                                        <title>MageLine - Redis Cache</title>
+                                    </mageline_rediscache>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

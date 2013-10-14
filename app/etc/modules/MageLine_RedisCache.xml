@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageLine_RedisCache>
+            <active>true</active>
+            <codePool>local</codePool>
+        </MageLine_RedisCache>
+    </modules>
+</config>
